@@ -78,6 +78,8 @@ docker-compose --env-file .env up --build
 
 ![tf-apply](Screenshots/tf-apply.png)
 
+![ec2](Screenshots/ec2.png)
+
 This will:
 - Build each microservice Dockerfile
 - Inject MongoDB URIs at runtime
