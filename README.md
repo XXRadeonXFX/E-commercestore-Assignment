@@ -103,7 +103,7 @@ docker push xxradeonxfx/user-service
 docker push xxradeonxfx/product-service
 docker push xxradeonxfx/cart-service
 docker push xxradeonxfx/order-service
-docker push xxradeonxfx/learner-frontend
+docker push xxradeonxfx/frontend
 ```
 
 ## 🔮 Future Enhancements
