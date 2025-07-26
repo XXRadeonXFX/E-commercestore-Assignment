@@ -72,6 +72,10 @@ docker-compose --env-file .env up --build
 
 ![front-end](Screenshots/front-end.png)
 
+![user-details](Screenshots/user-details.png)
+
+![postman-user](Screenshots/postman-user.png)
+
 
 This will:
 - Build each microservice Dockerfile
