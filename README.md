@@ -70,7 +70,7 @@ docker-compose --env-file .env up --build
 
 ![order-service](Screenshots/order-service.png)
 
-![frontend](Screenshots/frontend.png)
+![front-end](Screenshots/front-end.png)
 
 
 This will:
