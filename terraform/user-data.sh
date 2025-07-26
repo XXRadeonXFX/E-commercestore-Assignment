@@ -16,7 +16,7 @@ docker pull xxradeonxfx/user-service
 docker pull xxradeonxfx/product-service
 docker pull xxradeonxfx/cart-service
 docker pull xxradeonxfx/order-service
-docker pull xxradeonxfx/learner-frontend
+docker pull xxradeonxfx/frontend
 
 # Run each container on proper port
 docker run -d -p 3001:3001 --name user-service xxradeonxfx/user-service
