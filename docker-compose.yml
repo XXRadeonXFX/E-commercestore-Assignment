@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  user-service:
+    build: ./backend/user-service
+    image: xxradeonxfx/user-service
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - MONGODB_URI=${MONGO_URI_USERS}
+      - JWT_SECRET=${JWT_SECRET}
+
+  product-service:
+    build: ./backend/product-service
+    image: xxradeonxfx/product-service
+    ports:
+      - "3002:3002"
+    environment:
+      - PORT=3002
+      - MONGODB_URI=${MONGO_URI_PRODUCTS}
+
+  cart-service:
+    build: ./backend/cart-service
+    image: xxradeonxfx/cart-service
+    ports:
+      - "3003:3003"
+    environment:
+      - PORT=3003
+      - MONGODB_URI=${MONGO_URI_CARTS}
+      - PRODUCT_SERVICE_URL=http://product-service:3002
+
+  order-service:
+    build: ./backend/order-service
+    image: xxradeonxfx/order-service
+    ports:
+      - "3004:3004"
+    environment:
+      - PORT=3004
+      - MONGODB_URI=${MONGO_URI_ORDERS}
+      - CART_SERVICE_URL=http://cart-service:3003
+      - PRODUCT_SERVICE_URL=http://product-service:3002
+      - USER_SERVICE_URL=http://user-service:3001
+
+  frontend:
+    build: ./frontend
+    image: xxradeonxfx/learner-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_USER_SERVICE_URL=http://localhost:3001
+      - REACT_APP_PRODUCT_SERVICE_URL=http://localhost:3002
+      - REACT_APP_CART_SERVICE_URL=http://localhost:3003
+      - REACT_APP_ORDER_SERVICE_URL=http://localhost:3004
