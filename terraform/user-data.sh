@@ -23,4 +23,4 @@ docker run -d -p 3001:3001 --name user-service xxradeonxfx/user-service
 docker run -d -p 3002:3002 --name product-service xxradeonxfx/product-service
 docker run -d -p 3003:3003 --name cart-service xxradeonxfx/cart-service
 docker run -d -p 3004:3004 --name order-service xxradeonxfx/order-service
-docker run -d -p 3000:3000 --name frontend xxradeonxfx/learner-frontend
+docker run -d -p 3000:3000 --name frontend xxradeonxfx/frontend
