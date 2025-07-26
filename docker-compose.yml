@@ -44,7 +44,7 @@ services:
 
   frontend:
     build: ./frontend
-    image: xxradeonxfx/learner-frontend
+    image: xxradeonxfx/frontend
     ports:
       - "3000:3000"
     environment:
