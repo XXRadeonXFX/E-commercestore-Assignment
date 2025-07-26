@@ -62,6 +62,7 @@ JWT_SECRET=your-secret-key
 ```bash
 docker-compose --env-file .env up --build
 ```
+![product-service](Screenshots/product-service.png)
 
 This will:
 - Build each microservice Dockerfile
